@@ -3,6 +3,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
+        'none': "none",
         'hero': "url('/img/hero.jpg')",
       }
     },
