@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "gen": "./generate",
     "dev": "vite",
     "build": "vite build"
   },
@@ -14,7 +15,6 @@
     "autoprefixer": "^10.4.2",
     "cssnano": "^5.0.17",
     "postcss": "^8.4.6",
-    "tailwindcss": "^3.0.23",
-    "vite": "^2.8.4"
+    "tailwindcss": "^3.0.23"
   }
 }
