@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="{{ language }}">
+{% include "partials/_head.html" %}
+<body class="pt-16 text-gray-200 bg-gray-900 bg-cover sm:bg-center sm:bg-cover sm:bg-fixed sm:bg-hero">
+  {% include "partials/_nav.html" %}
+  {% include "partials/_header.html" %}
+  <div class="flex flex-col max-w-6xl py-6 mx-auto bg-gray-900 md:p-12 md:flex-row min-w-fit">
+    <div class="flex-1 px-12 py-6">
+      {% block intro_left %}
+      {% endblock intro_left %}
+    </div>
+    <div class="flex-1 px-12 py-6">
+      {% block intro_right %}
+      {% endblock intro_right %}
+    </div>
+  </div>
+  {% include "partials/_footer.html" %}
+</body>
+</html>

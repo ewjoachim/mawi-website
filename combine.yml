@@ -1,13 +1,10 @@
 variables:
-  lang: fr
-  description: "A"
-  keywords: "B"
-  social_file: "c.png"
-  title: "d"
-  base_url: "eeeeeeee"
+  base_url:
+    default: "https://manon-bc.fr/"
+    from_env: URL
 
 steps:
-  - run: "npx tailwindcss -i content/style.css -o output/style.css"
+  - run: "npx tailwindcss -i content/_style.css -o output/style.css"
     watch:
       - "tailwind.config.js"
-      - "content/style.css"
+      - "content/_style.css"

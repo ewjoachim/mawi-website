@@ -1,0 +1,10 @@
+<nav class="fixed inset-0 bg-gray-900 h-min">
+  <div class="mx-auto">
+    <div class="flex">
+      <a class="flex-1 hidden p-5 text-lg font-bold tracking-widest text-center uppercase sm:block hover:bg-neutral-100/10" href="#" >{{ title }}</a>
+      <a class="flex-1 p-5 text-lg font-bold tracking-widest text-center uppercase hover:bg-neutral-100/10" href="#">Instagram</a>
+      <a class="flex-1 p-5 text-lg font-bold tracking-widest text-center uppercase hover:bg-neutral-100/10" href="#">Etsy</a>
+      <a class="flex-1 p-5 text-lg font-bold tracking-widest text-center uppercase hover:bg-neutral-100/10" href="{{ '/en' if language == 'fr' else '/' }}"><span class="{{ 'underline' if language == 'fr' else '' }}">fr</span> / <span class="{{ 'underline' if language == 'en' else '' }}">en</a></a>
+    </div>
+  </div>
+</nav>
