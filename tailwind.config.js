@@ -5,7 +5,8 @@ content: ["content/**/*.html", "content/*.html"],
       backgroundImage: {
         'none': "none",
         'hero': "url('/img/hero.jpg')",
-      }
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
     },
   },
   plugins: [],

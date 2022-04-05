@@ -8,3 +8,4 @@ steps:
     watch:
       - "tailwind.config.js"
       - "content/_style.css"
+      - "content/*.html"

@@ -1,19 +1,66 @@
+{% set bg_colors = cycler("bg-gray-900", "bg-gray-800") %}
+
+{% macro image(src, alt) -%}
+<div class="flex-1 py-6 shrink-0 grow-0">
+  <img class="object-cover w-full border-2 rounded-lg border-slate-100" src="{{ src }}" alt="{{ alt }}">
+</div>
+{%- endmacro %}
+
+{% macro image_col() -%}
+<div class="flex flex-col justify-around flex-1 px-6 py-6 lg:px-12">
+  {{ caller() }}
+</div>
+{%- endmacro %}
+
+{% macro image_gallery(size, src, alt) -%}
+<div class="w-full {% if size == 'small' %}md:w-1/2{% endif %} p-4 md:p-2">
+  <img alt="{{ alt }}" class="block object-cover object-center w-full h-full rounded-lg"
+    src="{{ src }}">
+</div>
+{%- endmacro %}
+
 <!doctype html>
 <html lang="{{ language }}">
 {% include "partials/_head.html" %}
 <body class="pt-16 text-gray-200 bg-gray-900 bg-cover sm:bg-center sm:bg-cover sm:bg-fixed sm:bg-hero">
   {% include "partials/_nav.html" %}
   {% include "partials/_header.html" %}
-  <div class="flex flex-col max-w-6xl py-6 mx-auto bg-gray-900 md:p-12 md:flex-row min-w-fit">
-    <div class="flex-1 px-12 py-6 md">
-      {% block intro_left %}
-      {% endblock intro_left %}
+  <section class="flex flex-col w-full py-6 mx-0 lg:p-12 sm:p-6 md:flex-row min-w-fit {{ bg_colors.next() }}">
+    <div class="flex-1 px-6 py-6 text-center lg:px-12 md">
+      {% block section_1 %}
+      {% endblock section_1 %}
     </div>
-    <div class="flex-1 px-12 py-6 md">
-      {% block intro_right %}
-      {% endblock intro_right %}
+
+    {% call image_col() %}
+      {{ image(img_s1, img_alt_s1) }}
+    {% endcall %}
+  </section>
+  <section class="flex flex-col w-full py-6 mx-0 lg:p-12 sm:p-6 md:flex-row min-w-fit {{ bg_colors.next() }}">
+    {% call image_col() %}
+    {{ image(img_s2, img_alt_s2) }}
+    {% endcall %}
+    <div class="flex-1 px-6 py-6 text-justify lg:px-12 md">
+      {% block section_2 %}
+      {% endblock section_2 %}
     </div>
-  </div>
+  </section>
+  <section class="overflow-hidden py-6 {{ bg_colors.next() }}">
+    <div class="container mx-auto md:py-2 lg:pt-24 lg:px-32">
+      <div class="flex flex-col flex-wrap -m-1 md:flex-row md:-m-2">
+        <div class="flex flex-wrap md:w-1/2">
+          {{ image_gallery("small", img_s2, img_alt_s2) }}
+          {{ image_gallery("small", img_s2, img_alt_s2) }}
+          {{ image_gallery("big", img_s2, img_alt_s2) }}
+        </div>
+        <div class="flex flex-wrap md:w-1/2">
+          {{ image_gallery("big", img_s2, img_alt_s2) }}
+          {{ image_gallery("small", img_s2, img_alt_s2) }}
+          {{ image_gallery("small", img_s2, img_alt_s2) }}
+        </div>
+      </div>
+    </div>
+  </section>
+
   {% include "partials/_footer.html" %}
 </body>
 </html>

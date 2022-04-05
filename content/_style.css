@@ -2,9 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@include "node_module/leaflet/dist/leaflet.css"
+
 @layer components {
-  .md h3 {@apply text-lg font-bold;}
+  .md h3 {@apply text-xl font-bold pb-4;}
+  .md h4 {@apply text-lg font-bold pb-4 uppercase tracking-wide;}
   .md a {@apply underline;}
+  .md p {@apply pb-4;}
+  .md ul {@apply pl-4 pb-4;}
+  .md li {@apply list-disc pl-2 -indent-2;}
 }
-
-

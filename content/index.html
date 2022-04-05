@@ -1,14 +1,14 @@
 {% extends "base.template.html" %}
-{% set language =  "fr" %}
+{% set language = "fr" %}
 
 {% set title -%}
-Manon B-C
+Manon
 {% endset %}
 
 {% set subtitle -%}
-Gardes d'animaux et  visites à domicile
+Gardes d'animaux et visites à domicile en Charente-Limousine
+Partez l’esprit tranquille !
 {% endset %}
-
 
 {% set description -%}
 Manon B-C garde vos chiens, chats, chevaux: visites à domicile en Charente-Limousine, professionnels et particuliers, visites et gardes à domicile, partez l’esprit tranquille. Devis gratuit sur demande.
@@ -22,27 +22,86 @@ chien chat garde visite domicile chien TODO Lister les villes etc
 
 {% set copyright -%}
 {# https://entreprendre.service-public.fr/vosdroits/F31228/personnalisation/resultat?lang=&quest0=0 #}
-"© 2022-, TODO"
+© Manon Bourgeois-Cuny 2022- • N° Siret : 89915225000010 • Code APE : 9609Z
+Responsabilité Civile Professionnelle auprès de la MAIF
 {% endset %}
 
-{% block intro_left %}
+{% set img_s1 = "img/img.png" %}
+{% set img_alt_s1 = "TODO" %}
 
+{% block section_1 %}
 {% markdown %}
-### Yay
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sed felis mattis, iaculis nunc ac, vulputate nulla. Nullam malesuada sollicitudin nibh, et ultrices lectus semper id. Nam faucibus pharetra elit congue consequat. Duis a placerat tortor, et euismod nulla. Fusce scelerisque gravida velit et luctus. Quisque tortor justo, dignissim eget diam et, ullamcorper lacinia justo. Phasellus vestibulum eros pretium libero molestie, vel faucibus diam pellentesque. Suspendisse vitae orci id nibh elementum tincidunt. Nunc aliquam est in ante aliquam placerat. Praesent consectetur nulla nunc, et condimentum massa pharetra sed. Donec venenatis justo sit amet facilisis tincidunt. In hac habitasse platea dictumst. Suspendisse laoreet fringilla aliquet.
+### Gardes d'animaux et visites à domicile
+
+**12 ans** d’expérience avec les chevaux<br>
+BTS Productions Animales<br>
+<abbr title="Brevet professionnel de la jeunesse, de l'éducation populaire et du sport">BPJEPS</abbr> Equitation<br>
+Licence Pro Equine<br>
+<abbr title="Attestation de Connaissances pour les Animaux de Compagnie d'Espèces Domestiques">ACACED</abbr>
+
+Visite de prise de contact **gratuite** !
+
+Laissez-moi un message sur [Facebook](#),<br>par téléphone au [06 80 71 77 70](tel:+33680717770)<br>ou par email à [mb-c@hotmail.fr](mailto:mb-c@hotmail.fr)
+
+Manon Bourgeois-Cuny<br>4, rue de la Fontaine Royal<br>16420 Lesterps
+
 {% endmarkdown %}
+{% endblock section_1 %}
 
-{% endblock intro_left %}
+{% set img_s2 = "img/img.png" %}
+{% set img_alt_s2 = "TODO" %}
 
-
-{% block intro_right %}
-
+{% block section_2 %}
 {% markdown %}
-### Contact
-Foo Bar<br>
-Laissez-moi un message sur <a href="#">Facebook</a> / <a href="#">Instagram</a> / <a href="#">Whatsapp</a> / que sais-je<br>
-<a href="tel:+33600000000">06 00 00 00 00</a><br>
-12 rue du Schtroumpf<br>
-{% endmarkdown %}
 
-{% endblock intro_right %}
+La majorité des animaux aiment leur « chez eux », leur lieu de vie avec leur routine,
+et n’apprécient pas du tout un changement d’environnement, même pour une courte période.
+
+C’est pourquoi je vous propose de me déplacer jusqu’à votre domicile, lors de vos absences,
+pour prendre soin de vos compagnons, là où ils se sentent à l’aise et rassurés, afin de leur
+procurer un bien-être optimal.
+
+#### Prestations
+
+**Visites à domicile** : Fréquence selon vos besoins (1 fois tous les 2 jours, 1 ou 2 fois par jour…)
+
+**Gardes à domicile** :
+Durée selon vos besoins (quelques heures, demi-journée, journée, nuit, plusieurs jours, semaines…)
+
+**Lors d’une visite classique** :
+
+- Je prends soin de lui : attention, eau, nourriture, environnement
+- Je vérifie que votre compagnon va bien : physiquement et moralement
+- Je veille à la propreté
+
+**Je peux proposer en supplément, si nécessaire et selon vos souhaits** :
+
+- Soins et traitements particuliers
+- Pansages
+- Promenades/temps de jeu
+- Nettoyage poussé (curage de boxe…)
+- Manipulations spécifiques
+- Travail de votre cheval
+- Arrosage de plantes
+- Autres
+
+**Je vous donne des nouvelles** après chaque visite par sms ou e-mail, accompagnées de photos.
+
+**En cas de problème**, je vous contacte immédiatement ainsi que votre vétérinaire si besoin.
+
+#### Tarifs :
+
+La première rencontre est **gratuite** et permet de faire connaissance avec vous et
+votre animal, de découvrir les tâches à effectuer, d’évaluer vos besoins exacts et
+d’effectuer un devis si nécessaire.
+
+- Une visite à domicile classique, pour 1 à 2 animaux, d’environ 30 mins :<br>**15 € + frais de déplacements**\*
+- Une visite à domicile classique, pour 1 à 2 animaux, d’environ 1h :<br>**20 € + frais de déplacements***
+- Une visite à domicile pour plus de 2 animaux et/ou plus d’1h :<br>**Devis personnalisé gratuit sur demande**
+- Une garde à domicile :<br>**Devis personnalisé gratuit sur demande**
+
+<small>*Les frais de déplacements sont calculés par le site viamichelin le jour de la visite (en fonction du prix de l’essence, des kilomètres à partir de mon domicile à Lesterps, de ma voiture : renault clio II de 2003 1.2 16V 75).
+Par exemple, pour une visite à 15 kms (30 kms aller-retour), avec un prix de 2 € / Litre d’essence, les frais de déplacements vont coûter 5,30 €.</small>
+
+{% endmarkdown %}
+{% endblock section_2 %}
