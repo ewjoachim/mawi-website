@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@include "node_module/leaflet/dist/leaflet.css"
 
 @layer components {
   .md h3 {@apply text-xl font-bold pb-4;}

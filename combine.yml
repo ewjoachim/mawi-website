@@ -2,10 +2,20 @@ variables:
   base_url:
     default: "https://manon-bc.fr/"
     from_env: URL
+  map_token:
+    default: "pk.eyJ1IjoiZXdqb2FjaGltIiwiYSI6ImNsMW8wbG8xdzAxMnAzZG5xbjZzZnNxMmUifQ.2om45d2fPNIwlDI3Hy7ZvQ"
 
 steps:
-  - run: "npx tailwindcss -i content/_style.css -o output/style.css"
+  - run: "mkdir -p output/js/ output/css/"
+  - run: "cp node_modules/leaflet/dist/leaflet.js output/js/"
     watch:
+    - "node_modules/leaflet/dist/leaflet.js"
+  - run: "cp node_modules/leaflet/dist/leaflet.css output/css/"
+    watch:
+    - "node_modules/leaflet/dist/leaflet.css"
+  - run: "npx tailwindcss --postcss -i content/_style.css -o output/style.css"
+    watch:
+      - "postcss.config.js"
       - "tailwind.config.js"
       - "content/_style.css"
       - "content/*.html"
