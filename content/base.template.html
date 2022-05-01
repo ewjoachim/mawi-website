@@ -1,4 +1,5 @@
 {% set bg_colors = cycler("bg-gray-100", "bg-gray-200") %}
+{% set flex_direction_testimonies = cycler("md:flex-row", "md:flex-row-reverse") %}
 
 {% macro image(src, alt) -%}
 <div class="flex-1 py-6 shrink-0 grow-0">
@@ -45,16 +46,16 @@
       {{ image_kind("horse", 1) }}
     {% endcall %}
   </section>
-  <section class="flex flex-col w-full py-6 mx-0 lg:p-12 sm:p-6 md:flex-row min-w-fit {{ bg_colors.next() }}">
+  <section class="flex flex-col w-full py-6 mx-0 lg:p-12 sm:p-6 md:flex-row-reverse min-w-fit {{ bg_colors.next() }}">
+    <div class="flex-1 px-6 py-6 text-justify lg:px-12 md">
+      {% block services_prices %}
+      {% endblock services_prices %}
+    </div>
     {% call image_col() %}
     {{ image_kind("dog", 1) }}
     {{ image_kind("cat", 1) }}
     {{ image_kind("horse", 2) }}
     {% endcall %}
-    <div class="flex-1 px-6 py-6 text-justify lg:px-12 md">
-      {% block services_prices %}
-      {% endblock services_prices %}
-    </div>
   </section>
 
   <section class="w-full mx-0 min-w-fit {{ bg_colors.next() }}">
@@ -92,22 +93,97 @@
     </div>
   </section>
 
-  <section class="flex flex-col w-full py-6 mx-0 lg:p-12 sm:p-6 md:flex-row min-w-fit {{ bg_colors.next() }}">
-    <div class="flex-1 px-6 py-6 text-justify lg:px-12 md">
-      {% block testimonies %}
-      {% endblock testimonies %}
+  <section class="w-full py-6 mx-0 lg:p-12 sm:p-6 min-w-fit {{ bg_colors.next() }}">
+    <div class="flex flex-col {{ flex_direction_testimonies.next() }}">
+      <div class="flex-1 px-6 py-6 text-justify lg:px-12 md">
+        {% block testimonies_t1 %}
+        {% endblock testimonies_t1 %}
+      </div>
+      {% call image_col() %}
+      {{ image_kind("horse", 3) }}
+      {% endcall %}
     </div>
-    {% call image_col() %}
-    {{ image_kind("horse", 3) }}
-    {{ image_kind("horse", 4) }}
-    {{ image_kind("horse", 5) }}
-    {{ image_kind("horse", 6) }}
-    {{ image_kind("horse", 7) }}
-    {{ image_kind("horse", 8) }}
-    {{ image_kind("dog", 2) }}
-    {{ image_kind("dog", 3) }}
-    {{ image_kind("horse", 9) }}
-    {% endcall %}
+
+    <div class="flex flex-col {{ flex_direction_testimonies.next() }}">
+      <div class="flex-1 px-6 py-6 text-justify lg:px-12 md">
+        {% block testimonies_t2 %}
+        {% endblock testimonies_t2 %}
+      </div>
+      {% call image_col() %}
+      {{ image_kind("horse", 4) }}
+      {% endcall %}
+    </div>
+
+    <div class="flex flex-col {{ flex_direction_testimonies.next() }}">
+      <div class="flex-1 px-6 py-6 text-justify lg:px-12 md">
+        {% block testimonies_t3 %}
+        {% endblock testimonies_t3 %}
+      </div>
+      {% call image_col() %}
+      {{ image_kind("horse", 5) }}
+      {% endcall %}
+    </div>
+
+    <div class="flex flex-col {{ flex_direction_testimonies.next() }}">
+      <div class="flex-1 px-6 py-6 text-justify lg:px-12 md">
+        {% block testimonies_t4 %}
+        {% endblock testimonies_t4 %}
+      </div>
+      {% call image_col() %}
+      {{ image_kind("horse", 6) }}
+      {% endcall %}
+    </div>
+
+    <div class="flex flex-col {{ flex_direction_testimonies.next() }}">
+      <div class="flex-1 px-6 py-6 text-justify lg:px-12 md">
+        {% block testimonies_t5 %}
+        {% endblock testimonies_t5 %}
+      </div>
+      {% call image_col() %}
+      {{ image_kind("horse", 7) }}
+      {% endcall %}
+    </div>
+
+    <div class="flex flex-col {{ flex_direction_testimonies.next() }}">
+      <div class="flex-1 px-6 py-6 text-justify lg:px-12 md">
+        {% block testimonies_t6 %}
+        {% endblock testimonies_t6 %}
+      </div>
+      {% call image_col() %}
+      {{ image_kind("horse", 8) }}
+      {% endcall %}
+    </div>
+
+    <div class="flex flex-col {{ flex_direction_testimonies.next() }}">
+      <div class="flex-1 px-6 py-6 text-justify lg:px-12 md">
+        {% block testimonies_t7 %}
+        {% endblock testimonies_t7 %}
+      </div>
+      {% call image_col() %}
+      {{ image_kind("dog", 2) }}
+      {% endcall %}
+    </div>
+
+    <div class="flex flex-col {{ flex_direction_testimonies.next() }}">
+      <div class="flex-1 px-6 py-6 text-justify lg:px-12 md">
+        {% block testimonies_t8 %}
+        {% endblock testimonies_t8 %}
+      </div>
+      {% call image_col() %}
+      {{ image_kind("dog", 3) }}
+      {% endcall %}
+    </div>
+
+    <div class="flex flex-col {{ flex_direction_testimonies.next() }}">
+      <div class="flex-1 px-6 py-6 text-justify lg:px-12 md">
+        {% block testimonies_t9 %}
+        {% endblock testimonies_t9 %}
+      </div>
+      {% call image_col() %}
+      {{ image_kind("horse", 9) }}
+      {% endcall %}
+    </div>
+
   </section>
 
   <section class="overflow-hidden py-6 {{ bg_colors.next() }}">
