@@ -1,34 +1,34 @@
-{% set bg_colors = cycler("bg-gray-100", "bg-gray-200") %}
-{% set flex_direction_testimonies = cycler("md:flex-row", "md:flex-row-reverse") %}
+{%- set bg_colors = cycler("bg-gray-100", "bg-gray-200") -%}
+{%- set flex_direction_testimonies = cycler("md:flex-row", "md:flex-row-reverse") -%}
 
-{% macro image(src, alt) -%}
+{%- macro image(src, alt) -%}
 <div class="flex-1 py-6 shrink-0 grow-0">
   <img class="object-cover w-full rounded-lg" src="{{ src }}" alt="{{ alt }}">
 </div>
-{%- endmacro %}
+{%- endmacro -%}
 
-{% macro image_kind(kind, id, alt) -%}
+{%- macro image_kind(kind, id, alt) -%}
 {{image("img/" ~ kind ~ id ~ ".jpg", kind)}}
-{%- endmacro %}
+{%- endmacro -%}
 
-{% macro image_col() -%}
+{%- macro image_col() -%}
 <div class="flex flex-col justify-around flex-1 px-6 py-6 lg:px-12">
   {{ caller() }}
 </div>
-{%- endmacro %}
+{%- endmacro -%}
 
-{% macro image_gallery(size, src, alt) -%}
+{%- macro image_gallery(size, src, alt) -%}
 <div class="w-full {% if size == 'small' %}md:w-1/2{% endif %} p-4 md:p-2">
   <img alt="{{ alt }}" class="block object-cover object-center w-full h-full rounded-lg"
     src="{{ src }}">
 </div>
-{%- endmacro %}
+{%- endmacro -%}
 
-{% macro image_kind_gallery(kind, id, size) -%}
+{%- macro image_kind_gallery(kind, id, size) -%}
 {{image_gallery(size, "img/" ~ kind ~ id ~ ".jpg", kind)}}
-{%- endmacro %}
+{%- endmacro -%}
 
-{% macro image_url(kind, id) -%}img/{{kind}}{{id}}.jpg{%- endmacro %}
+{%- macro image_url(kind, id) -%}img/{{kind}}{{id}}.jpg{%- endmacro -%}
 
 <!doctype html>
 <html lang="{{ language }}">
