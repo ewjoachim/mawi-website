@@ -1,4 +1,4 @@
-<nav class="fixed inset-0 bg-gray-100 h-min">
+<nav class="fixed inset-0 bg-gray-100 z-[1500] h-min">
     <div id="burger" data-open="false" class="relative flex mx-auto sm:max-w-xl sm:hidden">
       <button class="absolute w-10 h-12 text-gray-500 top-2 focus:outline-none">
           <span class="sr-only">Open main menu</span>
@@ -15,8 +15,10 @@
     <div class="flex flex-col sm:flex-row">
       <a class="flex-1 hidden p-5 text-lg font-bold tracking-widest text-center uppercase sm:block hover:bg-gray-500/20" href="#" >{{ title }}</a>
       <a class="flex-1 p-5 text-lg font-bold tracking-widest text-center uppercase hover:bg-gray-500/20" target="_blank" href="https://www.facebook.com/Manon-Visites-et-Gardes-%C3%A0-Domicile-Charente-Limousine-Chevaux-et-autres-102193779157633">Facebook</a>
-      <a class="flex-1 p-5 text-lg font-bold tracking-widest text-center uppercase hover:bg-gray-500/20" target="_blank" href="#">CV</a>
-      <a class="flex-1 p-5 text-lg font-bold tracking-widest text-center uppercase hover:bg-gray-500/20" target="_blank" href="{{ '/en' if language == 'fr' else '/' }}"><span class="{{ 'underline' if language == 'fr' else '' }}">&#127467;&#127479;</span> / <span class="{{ 'underline' if language == 'en' else '' }}">&#127468;&#127463;</a></a>
+      <a class="flex-1 p-5 text-lg font-bold tracking-widest text-center uppercase hover:bg-gray-500/20" href="#{{ services_prices_tag }}">{{ services_prices_title }}</a>
+      <a class="flex-1 p-5 text-lg font-bold tracking-widest text-center uppercase hover:bg-gray-500/20" href="#{{ about_me_tag }}">{{ about_me_title }}</a>
+      <a class="flex-1 p-5 text-lg font-bold tracking-widest text-center uppercase hover:bg-gray-500/20" href="#{{ photos_tag }}">{{ photos_title }}</a>
+      <a class="flex-1 p-5 text-lg font-bold tracking-widest text-center uppercase hover:bg-gray-500/20" href="{{ '/en' if language == 'fr' else '/' }}"><span class="{{ 'underline' if language == 'fr' else '' }}">&#127467;&#127479;</span> / <span class="{{ 'underline' if language == 'en' else '' }}">&#127468;&#127463;</a></a>
     </div>
   </div>
 </nav>
