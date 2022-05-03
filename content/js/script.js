@@ -20,9 +20,9 @@ document.addEventListener("DOMContentLoaded", function() {
   L.circle(mapData.center, mapData.radius).addTo(map);
 
   var burger = document.getElementById("burger");
+  var menu = document.querySelector(".menu");
   function toggleMobileMenu(open) {
     let lines = burger.querySelectorAll(".burger-line");
-    let menu = document.querySelector(".menu")
     if (open) {
       burger.dataset["open"] = "true";
       lines[0].classList.add("rotate-45");
@@ -47,5 +47,12 @@ document.addEventListener("DOMContentLoaded", function() {
       toggleMobileMenu(burger.dataset["open"] === "false");
       }
   );
+  menu.querySelectorAll("a").forEach(element => {
+    element.addEventListener("click", ()=>{toggleMobileMenu(false)});
+  });
+
+  window.addEventListener("hashchange", function () {
+    window.scrollTo(window.scrollX, window.scrollY - 100);
+  });
 
 });
