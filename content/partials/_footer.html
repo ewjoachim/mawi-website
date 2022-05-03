@@ -1,3 +1,4 @@
-<footer class="w-full {{ bg_colors.next() }}">
-  <div class="p-5 text-xs text-center markdown">{{ copyright }}</div>
+<footer class="w-full p-5 {{ bg_colors.next() }}">
+  <div class="text-xs text-center markdown">{{ copyright }}</div>
+  <div class="text-xs text-center underline markdown"><a href="{{ '/cgv' if language == 'fr' else '/cgv-en' }}">{{ terms_title }}</a></div>
 </footer>

@@ -1,0 +1,108 @@
+{% extends "index.html" %}
+
+{% set subtitle -%}
+{% markdown %}
+Conditions générales de vente
+{% endmarkdown %}
+{% endset %}
+
+{% block main %}
+
+<nav class="fixed inset-0 bg-gray-100 z-[1500] h-min flex">
+  <a class="flex-1 p-5 text-lg font-bold tracking-widest text-center uppercase hover:bg-gray-500/20" href="/">Retour au site</a>
+  <a class="flex-1 p-5 text-lg font-bold tracking-widest text-center uppercase hover:bg-gray-500/20" href="{{ '/cgv-en' if language == 'fr' else '/cgv' }}"><span class="{{ 'underline' if language == 'fr' else '' }}">&#127467;&#127479;</span> / <span class="{{ 'underline' if language == 'en' else '' }}">&#127468;&#127463;</a>
+</nav>
+{% include "partials/_header.html" %}
+
+<section class="w-full p-6 mx-0 bg-gray-100 min-w-fit md">
+{% markdown %}
+### Conditions Générales de Vente
+
+Applicables à partir du 01 janvier 2022.
+Article L.441-6 et suivants du code du commerce.
+
+#### Prestataire de services :
+
+Auto-entreprise: Manon Bourgeois-Cuny, 4, Rue de la Fontaine Royal, 16420 Lesterps, France.
+
+Tel : 06.80.71.77.70. E-mail : mb-c@hotmail.fr.
+
+- N° Siret : 89915225000010, Code APE : 9609Z.
+- N° Acaced : 2022/21b9-fa18
+- N° Carte Pro. : 01621ED0025
+- Responsabilité Civile Professionnelle auprès de la Maif.
+
+#### Caractéristiques essentielles des services vendus:
+
+L’auto-entreprise de Manon Bourgeois-Cuny propose une vente de prestations de services de visites à domicile et garde d’animaux (chevaux, chiens, chats et autres animaux de compagnie) à domicile dans le but de prendre soins de ces mêmes animaux lors de l’absence de leurs propriétaire respectif, nommé ci-après le « Client ».
+
+Les présentes conditions générales de vente constituent le socle de la négociation commerciale et sont systématiquement remises à chaque Client.
+Les conditions générales de vente décrites ici détaillent les droits et obligations de l'auto-entreprise Manon Bourgeois-Cuny et de son Client dans le cadre de la vente de prestations de service.
+Toute acceptation du devis/contrat de vente avec la clause « je reconnais avoir pris connaissance et accepté les conditions générales de ventes ci-jointes » implique l’adhésion sans réserve du Client aux présentes conditions générales de vente.
+
+La fréquence, la durée ainsi que la tarification des visites ou gardes à domicile seront définies selon le besoin du Client et seront notifiées sur le contrat de vente signé par les deux parties lors de sa création.
+Le contrat de vente mentionnera également les coordonnées de Manon Bourgeois-Cuny ainsi que celles du Client afin que ce dernier soit prévenu en cas de problème.
+Les coordonnées du vétérinaire habituel y seront notées pour être contacté en cas d’urgence. Si une intervention vétérinaire est nécessaire, le Client, en cas d’injoignabilité, autorise Manon Bourgeois-Cuny à prendre les dispositions nécessaires : demander un déplacement du vétérinaire jusqu’au domicile du Client ou transporter l’animal jusqu’à la clinique, selon les possibilités.
+Aucun frais ne sera avancé de la part de Manon Bourgeois-Cuny, et Manon Bourgeois-Cuny s’autorise la facturation d’un supplément à la fin de la prestation pour rembourser l’éventuel déplacement et pour compenser les conséquences de la gestion de la situation exceptionnelle.
+Une description détaillée des tâches à effectuer lors des visites ou gardes sera mise par écrit grâce au don d’informations complètes du Client et Manon Bourgeois-Cuny s’engage à les appliquer minutieusement. Le Client se doit de donner tous les renseignements nécessaires à Manon Bourgeois-Cuny à propos des animaux et de leur environnement afin qu’elle puisse effectuer la prestation au mieux.
+Manon Bourgeois-Cuny s’engage à la confidentialité de toutes les données concernant le Client, ses animaux et son domicile.
+Le contrat prendra effet le jour même de la signature des deux parties : le Client et Manon Bourgeois-Cuny.
+
+La prise de contact, consistant en une première visite, est gratuite et permet de faire connaissance avec le Client et ses animaux, de découvrir les tâches à effectuer, d’évaluer les besoins exacts du Client et d’effectuer un devis si nécessaire.
+Elle n’engage aucune des parties tant qu’un contrat de vente n’est pas signé par le Client et l’auto-entreprise Manon Bourgeois-Cuny. Cette dernière s’autorise le droit de refuser une visite ou une garde sans avoir à se justifier.
+
+Le Client est chargé de mettre à disposition tous les éléments nécessaires au bien-être de ses animaux lors de son absence (nourriture, eau, litière, contenants, outils nécessaires à la distribution, pharmacie vétérinaire, licols, laisses, jouets…etc).
+Manon Bourgeois-Cuny s’engage à n’utiliser que les éléments nécessaires au bien-être des animaux lors de ses visites ou gardes et à respecter l’intégralité de la propriété du Client.
+
+Le Client s’engage à régler les factures émises par Manon Bourgeois-Cuny dans les termes indiqués dans ces conditions générales de vente. Manon Bourgeois-Cuny s’engage à exécuter la prestation demandée par le Client avec le plus grand soin et au mieux de ses compétences professionnelles.
+
+#### Barème des prix
+
+T.V.A. non applicable, article 293 B du CGI (Code Général des Impôts).
+
+- Une visite à domicile classique, pour 1 à 2 animaux, d’environ 30 mins : 15 € + frais de déplacements\*.
+- Une visite à domicile classique, pour 1 à 2 animaux, d’environ 1h : 20 € + frais de déplacements\*.
+- Une visite à domicile pour plus de 2 animaux et/ou plus d’1h : devis personnalisé sur demande.
+- Une garde à domicile : devis personnalisé sur demande.
+
+*Les frais de déplacements sont calculés par le site viamichelin le jour de la visite (en fonction du prix de l’essence, des kilomètres à partir de mon domicile à Lesterps, de ma voiture : renault clio II de 2003 1.2 16V 75).
+
+L’auto-entreprise Manon Bourgeois-Cuny s’accorde le droit de modifier ses tarifs à tout moment. Toutefois, elle s’engage à facturer les services commandés au prix indiqués lors de la signature du contrat de vente, sauf en cas de situation jugée exceptionnelle (comme par exemple la gestion d’une urgence vétérinaire, d’une échappée d’animaux…) qui va requérir un temps de présence plus important, entre autres, et qui aura pour conséquence un supplément tarifaire variable.
+
+#### Conditions de règlement
+
+- Règlement par chèque accepté.
+- Règlement par espèces accepté.
+- Délais de paiement : La facture de la (ou des) prestation(s) doit être réglée au maximum au trentième jour suivant sa date d’émission.
+- Pénalités de retard : En cas de retard de paiement, il sera appliqué une indemnité forfaitaire pour frais de recouvrement de 40 € (Code de Commerce – Art D441-5). Taux des pénalités en l’absence de paiement : 5 %.
+- Conditions d’escompte : Aucun escompte.
+
+#### Droit de rétractation :
+
+Le client, à partir du moment où le contrat de vente a été signé par les deux parties (le client et Manon Bourgeois-Cuny), dispose d’un droit de rétractation jusqu’à 72 heures avant le début de la prestation notifiée sur ce même contrat, au-delà de ce délai, la prestation est due et sera facturée.
+
+#### Responsabilité :
+
+Manon Bourgeois-Cuny se dégage de la responsabilité de tous dommages causés par les animaux durant la période de garde mentionnée sur le contrat et de toute échappée des animaux causée par des faits indépendants de sa volonté. Si le cas se produisait, elle mettrait tout en œuvre afin de régulariser la situation, dans la limite de ses capacités.
+
+La responsabilité de Manon Bourgeois-Cuny ne pourra être mise en cause qu’en cas de manquement à son obligation de moyens, le Client ne pourra pas l’invoquer s’il a omis de mentionner une information nécessaire pour la bonne exécution de la prestation ou en cas de force majeure ou d’autres causes indépendantes de la volonté de Manon Bourgeois-Cuny.
+
+#### Cas de force majeure :
+
+La responsabilité de l’auto-entreprise Manon Bourgeois-Cuny ne pourra pas être mise en œuvre si la non-exécution ou le retard dans l’exécution de l’une de ses obligations décrites dans les présentes conditions générales de vente découle d’un cas de force majeure. A ce titre, la force majeure s’entend de tout événement extérieur, imprévisible et irrésistible au sens de l’article 1148 du Code Civil.
+
+#### Tribunal compétent :
+
+Tout litige relatif à l’interprétation et à l’exécution des présentes conditions générales de vente est soumis au droit français. A défaut de résolution amiable, le litige sera porté devant le tribunal de commerce d’Angoulême (16).
+
+#### Résiliation du contrat :
+
+Si le ou les animaux gardés lors de la prestation se révèle(nt) agressif(s) envers Manon Bourgeois-Cuny ou présente(nt) un comportement anormal voire dangereux, rendant l’exécution de la prestation impossible, Manon Bourgeois-Cuny pourra résilier l’accord qui la lie au Client, c’est-à-dire le contrat.
+
+#### Hébergement :
+
+Netlify, Inc., 2325 3rd Street, Suite 296, San Francisco, California 94107 United States
+
+{% endmarkdown %}
+</section>
+{% endblock main %}
