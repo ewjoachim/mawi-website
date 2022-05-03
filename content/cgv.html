@@ -8,10 +8,9 @@ Conditions générales de vente
 
 {% block main %}
 
-<nav class="fixed inset-0 bg-gray-100 z-[1500] h-min flex">
-  <a class="flex-1 p-5 text-lg font-bold tracking-widest text-center uppercase hover:bg-gray-500/20" href="/">Retour au site</a>
-  <a class="flex-1 p-5 text-lg font-bold tracking-widest text-center uppercase hover:bg-gray-500/20" href="{{ '/cgv-en' if language == 'fr' else '/cgv' }}"><span class="{{ 'underline' if language == 'fr' else '' }}">&#127467;&#127479;</span> / <span class="{{ 'underline' if language == 'en' else '' }}">&#127468;&#127463;</a>
-</nav>
+{% set back_to_site_title = "Retour au site" %}
+
+{% include "partials/_cgv_nav.html" %}
 {% include "partials/_header.html" %}
 
 <section class="w-full p-6 mx-0 bg-gray-100 min-w-fit md">
