@@ -54,5 +54,12 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener("hashchange", function () {
     window.scrollTo(window.scrollX, window.scrollY - 100);
   });
+  
+  document.querySelectorAll('a[href="mailto:"]').forEach((element) => {
+    // what's displayed
+    var email = element.innerHTML + "@" + window.location.hostname.match(/[^.]+\.[^.]+$/)[0]
+    element.href = "mailto:" + email;
+    element.innerHTML = email;
+  })
 
 });
