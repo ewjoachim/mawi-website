@@ -2,6 +2,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  {% if noindex|default(False) %}
+  <meta name="robots" content="noindex">
+  {% endif %}
 
   <!-- Primary Meta Tags -->
   <title>{{ page_title }}</title>
@@ -16,7 +19,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
 
   <!-- Open Graph / Facebook -->
-  {% set social_url = '{base_url}/{social_file}'.format(
+  {% set social_url = '{base_url}/img/{social_file}'.format(
     base_url=base_url,
     social_file=social_file | default('social.png'),
   ) %}
