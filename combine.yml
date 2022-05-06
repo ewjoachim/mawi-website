@@ -1,4 +1,5 @@
 variables:
+  email_domain: manon-bc.fr
   base_url:
     default: "https://manon-bc.fr/"
     from_env: URL
