@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
   document.querySelectorAll('a[href="mailto:"]').forEach((element) => {
     // what's displayed
-    var email = element.innerHTML + "@" + window.location.hostname.match(/[^.]+\.[^.]+$/)[0]
+    var email = element.innerHTML + "@" + document.querySelector("body").dataset.emailDomain
     element.href = "mailto:" + email;
     element.innerHTML = email;
   })
