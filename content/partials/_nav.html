@@ -19,7 +19,7 @@
         {"label": contact[lang].menu_title, "url": "#" + contact[lang].fragment},
         {"label": services_prices[lang].menu_title, "url": "#" + services_prices[lang].fragment},
         {"label": about_me[lang].menu_title, "url": "#" + about_me[lang].fragment},
-        {"label": gallery[lang].title, "url": "#" + gallery[lang].fragment},
+        {"label": gallery[lang].menu_title, "url": "#" + gallery[lang].fragment},
       ] %}
       <a class="flex-1 px-1 py-5 font-bold tracking-widest text-center uppercase sm:text-sm md:text-base lg:px-5 lg:text-lg hover:bg-gray-500/20" target="{% if link.ext|default(False) %}_blank{% else %}_self{% endif %}" href="{{ link.url }}">{{ link.label }}</a>
       {% endfor %}

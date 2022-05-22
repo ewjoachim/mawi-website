@@ -84,7 +84,9 @@ gallery:
 fr:
   fragment: photos
   title: Photos
+  menu_title: Photos
 
 en:
   fragment: pictures
   title: Pictures
+  menu_title: Pictures

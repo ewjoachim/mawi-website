@@ -6,7 +6,7 @@ function drawMap() {
   var map = L.map(
     'map',
     { scrollWheelZoom: false }
-  ).setView(mapData.init, mapData.initZoom);
+  ).setView(mapData.geojson.geometry.coordinates, mapData.initZoom);
 
   map.on('focus', function () { console.log("focus"); map.scrollWheelZoom.enable(); });
   map.on('blur', function () { console.log("blur"); map.scrollWheelZoom.disable(); });

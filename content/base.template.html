@@ -84,8 +84,7 @@
   {% set map_data = {
   "token": map.token,
   "geojson": map.geojson,
-  "init": [46.0081922, 0.7779249],
-  "initZoom": 9,
+  "initZoom": map.init_zoom,
   } %}
   <script id="map-data" type="application/json">{{ map_data | tojson }}</script>
 
@@ -104,14 +103,14 @@
   {% for tes in testimonies %}
     <div class="flex flex-col {{ flex_direction.next() }}">
       <div class="flex-1 px-6 py-6 text-justify lg:px-12 md">
-        <blockquote>
+        <blockquote class="pl-5 mt-6 ml-5 italic border-l-4 border-gray-300">
           {% markdown -%}
           {{- tes[lang].body -}}
           {%- endmarkdown %}
         </blockquote>
         <div class="mt-3 italic">
           <span class="font-bold">{{ tes[lang].author }}</span>,
-          {{ tes[lang].author_desc }}
+          {% markdown -%}{{ tes[lang].author_desc }}{%- endmarkdown %}
         </div>
       </div>
       {% call image_col() %}

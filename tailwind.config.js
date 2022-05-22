@@ -1,13 +1,6 @@
 module.exports = {
-content: ["content/**/*.html", "content/*.html"],
+  content: ["output/**/*.html", "output/*.html"],
   theme: {
-    extend: {
-      backgroundImage: {
-        'none': "none",
-        'hero': "url('/img/hero.jpg')",
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-      },
-    },
   },
   plugins: [],
 }

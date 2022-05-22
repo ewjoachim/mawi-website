@@ -10,8 +10,7 @@ geojson: [{
         }
     }]
 token: "pk.eyJ1IjoiZXdqb2FjaGltIiwiYSI6ImNsMW8wbG8xdzAxMnAzZG5xbjZzZnNxMmUifQ.2om45d2fPNIwlDI3Hy7ZvQ"
-init: [46.0081922, 0.7779249]
-initZoom: 1
+init_zoom: 9
 fr:
   title: Zone d'intervention
   fragment: zone
