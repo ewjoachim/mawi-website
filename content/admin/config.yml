@@ -1,5 +1,5 @@
 backend:
-  name: github
+  name: test-repo
   repo: mawi-website/mawi-website
 
 i18n:
@@ -50,7 +50,7 @@ collections:
             name: images
             i18n: false
             widget: list
-            field: {label: Image, widget: image}
+            field: {name: src, label: Image, widget: image}
 
           - label: Gallerie d'images en dessous
             name: gallery
@@ -96,7 +96,7 @@ collections:
             name: images
             i18n: false
             widget: list
-            field: {label: Image, widget: image}
+            field: {name: src, label: Image, widget: image}
 
       - label: "Photos"
         i18n: true
@@ -203,12 +203,12 @@ collections:
             name: images
             i18n: false
             widget: list
-            field: {label: Image, widget: image}
+            field: {name: src, label: Image, widget: image}
 
       - label: "Section Témoignages"
         i18n: true
-        name: "services_prices"
-        file: "content/_services_prices.yml"
+        name: "testimony_section"
+        file: "content/_testimony_section.yml"
         fields:
 
           - label: Titre
@@ -223,10 +223,11 @@ collections:
             widget: string
 
   - name: "testimonies"
-    label: "Sections"
+    label: "Témoignages"
     folder: "content/testimonies"
     slug: "{{order}}-{{author}}"
     i18n: true
+    create: true
     fields:
 
       - label: Ordre
@@ -327,8 +328,8 @@ collections:
 
       - label: "Métadonnées"
         i18n: true
-        name: "metadata"
-        file: "content/_metadata.yml"
+        name: "seo_metadata"
+        file: "content/_seo_metadata.yml"
         fields:
 
           - label: Titre du site (apparait dans l'onglet)
