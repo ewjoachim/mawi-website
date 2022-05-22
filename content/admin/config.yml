@@ -243,12 +243,12 @@ collections:
 
       - label: Qui a dit ça ?
         name: author
-        i18n: false
+        i18n: true
         widget: string
 
       - label: Qui est cette personne ?
         name: author_desc
-        i18n: false
+        i18n: true
         widget: markdown
         minimal: true
 
