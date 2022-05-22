@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: mawi-website/mawi-website
+  branch: main
 
 i18n:
   structure: single_file
