@@ -8,18 +8,22 @@
               <span aria-hidden="true" class="burger-line block absolute  h-0.5 w-5 bg-current transform  transition duration-500 ease-in-out" :class="{'-rotate-45': open, ' translate-y-1.5': !open}"></span>
           </div>
       </button>
-      <a class="flex-1 px-1 py-5 font-bold tracking-widest text-center uppercase sm:text-sm md:text-base lg:px-5 lg:text-lg hover:bg-gray-500/20" href="#" >{{ title }}</a>
+      <a class="flex-1 px-1 py-5 font-bold tracking-widest text-center uppercase sm:text-sm md:text-base lg:px-5 lg:text-lg hover:bg-gray-500/20" href="#" >{{ metadata[lang].title }}</a>
   </div>
 
   <div class="hidden mx-auto menu sm:block">
     <div class="flex flex-col sm:flex-row">
-      <a class="flex-1 hidden px-1 py-5 font-bold tracking-widest text-center uppercase sm:text-sm md:text-base lg:px-5 lg:text-lg sm:block hover:bg-gray-500/20" href="#" >{{ title }}</a>
-      <a class="flex-1 px-1 py-5 font-bold tracking-widest text-center uppercase sm:text-sm md:text-base lg:px-5 lg:text-lg hover:bg-gray-500/20" target="_blank" href="https://www.facebook.com/Manon-Visites-et-Gardes-%C3%A0-Domicile-Charente-Limousine-Chevaux-et-autres-102193779157633">Facebook</a>
-      <a class="flex-1 px-1 py-5 font-bold tracking-widest text-center uppercase sm:text-sm md:text-base lg:px-5 lg:text-lg hover:bg-gray-500/20" href="#{{ contact_tag }}">{{ contact_title }}</a>
-      <a class="flex-1 px-1 py-5 font-bold tracking-widest text-center uppercase sm:text-sm md:text-base lg:px-5 lg:text-lg hover:bg-gray-500/20" href="#{{ services_prices_tag }}">{{ services_prices_title }}</a>
-      <a class="flex-1 px-1 py-5 font-bold tracking-widest text-center uppercase sm:text-sm md:text-base lg:px-5 lg:text-lg hover:bg-gray-500/20" href="#{{ about_me_tag }}">{{ about_me_title }}</a>
-      <a class="flex-1 px-1 py-5 font-bold tracking-widest text-center uppercase sm:text-sm md:text-base lg:px-5 lg:text-lg hover:bg-gray-500/20" href="#{{ photos_tag }}">{{ photos_title }}</a>
-      <a class="flex-1 px-1 py-5 font-bold tracking-widest text-center uppercase sm:text-sm md:text-base lg:px-5 lg:text-lg hover:bg-gray-500/20" href="{{ '/en' if language == 'fr' else '/' }}"><span class="{{ 'underline' if language == 'fr' else '' }}">&#127467;&#127479;</span>&nbsp;/&nbsp;<span class="{{ 'underline' if language == 'en' else '' }}">&#127468;&#127463;</a>
+      <a class="flex-1 hidden px-1 py-5 font-bold tracking-widest text-center uppercase sm:text-sm md:text-base lg:px-5 lg:text-lg sm:block hover:bg-gray-500/20" href="#" >{{ metadata[lang].title }}</a>
+      {% for link in [
+        {"label": "Facebook", "url": metadata.facebook_url, "ext": True},
+        {"label": contact[lang].menu_title, "url": "#" + contact[lang].fragment},
+        {"label": services_prices[lang].menu_title, "url": "#" + services_prices[lang].fragment},
+        {"label": about_me[lang].menu_title, "url": "#" + about_me[lang].fragment},
+        {"label": gallery[lang].title, "url": "#" + gallery[lang].fragment},
+      ] %}
+      <a class="flex-1 px-1 py-5 font-bold tracking-widest text-center uppercase sm:text-sm md:text-base lg:px-5 lg:text-lg hover:bg-gray-500/20" target="_blank" target="{% if link.ext|default(False) %}_blank{% else %}_self{% endif %}" href="{{ link.url }}">{{ link.label }}</a>
+      {% endfor %}
+      <a class="flex-1 px-1 py-5 font-bold tracking-widest text-center uppercase sm:text-sm md:text-base lg:px-5 lg:text-lg hover:bg-gray-500/20" href="{{ '/en' if lang == 'fr' else '/' }}"><span class="{{ 'underline' if lang == 'fr' else '' }}">&#127467;&#127479;</span>&nbsp;/&nbsp;<span class="{{ 'underline' if lang == 'en' else '' }}">&#127468;&#127463;</a>
     </div>
   </div>
 </nav>
