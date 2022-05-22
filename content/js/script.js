@@ -3,13 +3,14 @@ function drawMap() {
   if (!element) { return; }
   var mapData = JSON.parse(element.innerText);
 
+  // https://macwright.com/lonlat/
   var map = L.map(
     'map',
     { scrollWheelZoom: false }
-  ).setView(mapData.geojson[0].geometry.coordinates, mapData.initZoom);
+  ).setView(mapData.geojson[0].geometry.coordinates.slice().reverse(), mapData.initZoom);
 
-  map.on('focus', function () { console.log("focus"); map.scrollWheelZoom.enable(); });
-  map.on('blur', function () { console.log("blur"); map.scrollWheelZoom.disable(); });
+  map.on('focus', function () { map.scrollWheelZoom.enable(); });
+  map.on('blur', function () { map.scrollWheelZoom.disable(); });
 
   L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}", {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
