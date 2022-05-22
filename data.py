@@ -46,13 +46,6 @@ def extract_yml(path):
     data = yaml.safe_load(path.read_text())
     name = str(path.stem.lstrip("_"))
 
-    print(f"{name}:")
-    for params, i18n in [(data, False), (data.get("fr", {}), True)]:
-        print(
-            yaml.safe_dump(
-                [{"i18n": i18n, "param": param, "type": "markdown"} for param in params]
-            )
-        )
     data["name"] = name
     return data
 
