@@ -1,11 +1,130 @@
-<!doctype html>
-<html lang="{{ language }}">
-{% include "partials/_head.html" %}
-<body class="pt-16 text-gray-900 bg-gray-100 bg-cover sm:bg-center sm:bg-cover sm:bg-fixed sm:bg-hero" data-email-domain="{{ email_domain }}">
-
+{% extends "skeleton.template.html" %}
 {% block main %}
+
+{%- set bg_colors = cycler("bg-gray-100", "bg-gray-200") -%}
+{%- set flex_direction = cycler("md:flex-row", "md:flex-row-reverse") -%}
+
+{%- macro image(src) -%}
+  <div class="flex-1 py-6 shrink-0 grow-0">
+    <img class="object-cover w-full rounded-lg" src="{{ src }}" alt="{{ metadata[lang].image_alt }}">
+  </div>
+{%- endmacro -%}
+
+{%- macro image_col() -%}
+  <div class="flex flex-col justify-around flex-1 px-6 py-6 lg:px-12">
+    {{ caller() }}
+  </div>
+{%- endmacro -%}
+
+{%- macro image_in_gallery(size, src) -%}
+  <div class="w-full {% if size == 'small' %}md:w-1/2{% endif %} p-4 md:p-2">
+    <img alt="{{ metadata[lang].image_alt }}" class="block object-cover object-center w-full h-full rounded-lg"
+      src="{{ src }}">
+  </div>
+{%- endmacro -%}
+
+{%- macro image_gallery(images) -%}
+  <div class="container mx-auto overflow-hidden md:py-2 lg:pt-24 lg:px-32">
+    <div class="flex flex-col flex-wrap -m-1 md:flex-row md:-m-2">
+        <div class="flex flex-wrap md:w-1/2">
+          {% for img in images.col1 %}
+            {{ image_in_gallery(img.size, img.src) }}
+          {% endfor %}
+        </div>
+        <div class="flex flex-wrap md:w-1/2">
+          {% for img in images.col2 %}
+            {{ image_in_gallery(img.size, img.src) }}
+          {% endfor %}
+        </div>
+    </div>
+  </div>
+{%- endmacro -%}
+
+{%- macro section(sec, center=False) -%}
+  <section class="w-full min-w-fit {{ bg_colors.next() }}">
+    <div class="flex flex-col py-6 mx-0 lg:p-12 sm:p-6 {{ flex_direction.next() }}">
+      <div class="flex-1 px-6 py-6 {% if center %}text-center{% else %}text-left md:text-justify{% endif %} lg:px-12 md">
+        <h3 id="{{ sec[lang].fragment }}">{{ sec[lang].title }}</h3>
+        {% markdown -%}
+          {{ sec[lang].body }}
+        {%- endmarkdown %}
+      </div>
+
+      {% call image_col() %}
+        {% for src in sec.images %}
+          {{ image(src) }}
+        {% endfor %}
+      {% endcall %}
+
+    </div>
+    {{ caller() }}
+  </section>
+{%- endmacro -%}
+
+{% include "partials/_nav.html" %}
+{% with header_subtitle=metadata[lang].subtitle %}
+  {% include "partials/_header.html" %}
+{% endwith %}
+
+{% call section(contact, center=True) %}{% endcall %}
+
+{% call section(services_prices) %}{% endcall %}
+
+<section class="w-full mx-0 min-w-fit {{ bg_colors.next() }}">
+  <div class="px-6 py-6 md:px-12 lg:px-24 md">
+    <h3 id="{{ map[lang].fragment }}">{{ map[lang].title }}</h3>
+      {% markdown -%}
+        {{- map[lang].body -}}
+      {%- endmarkdown %}
+  </div>
+  <div class="md:px-20">
+      <div id="map" class="w-full h-96"></div>
+  </div>
+
+  {% set map_data = {
+  "token": map.token,
+  "geojson": map.geojson,
+  "initZoom": map.init_zoom,
+  } %}
+  <script id="map-data" type="application/json">{{ map_data | tojson }}</script>
+
+</section>
+
+{% call section(about_me) %}
+{{ image_gallery(about_me.gallery) }}
+{% endcall %}
+
+{{- flex_direction.reset() or '' -}}
+
+<section class="w-full py-6 mx-0 lg:p-12 sm:p-6 min-w-fit {{ bg_colors.next() }}">
+  <h3 id="{{ testimony_section[lang].fragment }}" class="px-6 pb-4 text-xl font-bold">
+    {{ testimony_section[lang].title }}
+  </h3>
+  {% for tes in testimonies %}
+    <div class="flex flex-col {{ flex_direction.next() }}">
+      <div class="flex-1 px-6 py-6 text-justify lg:px-12 md">
+        <blockquote class="pl-5 mt-6 ml-5 italic border-l-4 border-gray-300">
+          {% markdown -%}
+          {{- tes[lang].body -}}
+          {%- endmarkdown %}
+        </blockquote>
+        <div class="mt-3 italic">
+          <span class="font-bold">{{ tes[lang].author }}</span>,
+          {% markdown -%}{{ tes[lang].author_desc }}{%- endmarkdown %}
+        </div>
+      </div>
+      {% call image_col() %}
+      {{ image(tes.image) }}
+      {% endcall %}
+    </div>
+  {% endfor %}
+
+</section>
+
+<section class="w-full py-6 mx-0 lg:p-12 sm:p-6 min-w-fit {{ bg_colors.next() }}" id="{{ gallery[lang].fragment }}">
+  {{ image_gallery(gallery.gallery) }}
+</section>
+
+
 {% endblock main %}
-{% include "partials/_footer.html" %}
-  <script src="/js/script.js"></script>
-</body>
-</html>
+

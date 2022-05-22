@@ -1,0 +1,63 @@
+images:
+  - /img/cat2.jpg
+gallery:
+  col1:
+    - src: /img/manon2.jpg
+      size: small
+    - src: /img/manon5.jpg
+      size: small
+    - src: /img/manon3.jpg
+      size: big
+  col2:
+    - src: /img/manon4.jpg
+      size: big
+    - src: /img/manon1.jpg
+      size: big
+fr:
+  title: À propos de Manon…
+  menu_title: À propos
+  fragment: a-propos-de-manon
+  body: |-
+    L’idée de créer cette auto-entreprise m’est venue car plusieurs propriétaires ces dernières années m’ont demandé d’apporter des soins à leurs chevaux et autres animaux pendant leur absence.
+    Ces personnes recherchaient quelqu’un de confiance, disponible et ayant des connaissances dans le milieu équin.
+    Avec plus de 12 ans d’expérience dans les chevaux en France et à l’étranger, notamment en tant que responsable d’élevage, je suis devenue la personne à contacter en cas de départ, même inopiné, pour vérifier que la « famille » animale restant à la maison se porte bien.
+
+    En plus de mon expérience pratique, je suis titulaire d’un BTS Productions Animales option Equin ainsi que d’une Licence Pro. valorisation et commercialisation des chevaux qui m’ont offert un socle de connaissances théoriques dont je me sers quotidiennement.
+
+    Par ailleurs, étant titulaire du BPJEPS équitation depuis 2011 et montant en concours complet sur mon temps de loisir, je travaille régulièrement des chevaux, que ce soit à pied ou monté. Je vous propose ainsi, au besoin, le travail et/ou l’entretien de vos chevaux.
+
+    J’ai pu constater que les propriétaires de chevaux possèdent souvent d’autres animaux. J’ai donc décidé de me former, en passant l’ACACED, pour répondre au mieux à cette demande.
+
+    Possédant moi-même un cheval et un chat depuis plusieurs années, j’ai dû parfois m’absenter, d’où ma compréhension du besoin primordial de vous adresser à une personne de confiance, qui assure votre sérénité et le confort de vos animaux.
+
+    Au fil du temps, j’ai acquis de l’expérience grâce aux différentes missions que j’ai déjà effectuées, tant auprès de particuliers que de professionnels. Elles m’ont permises de rencontrer de nombreux animaux et de créer une relation, tout en tenant compte de leur caractère propre. J’ai pu constater que ces chevaux, chiens, chats appréciaient tous l’amour, l’attention et les soins que je leur procurais, et que leurs [propriétaires étaient ravis](#temoignages).
+
+    Votre confiance au fil des années est l'atout principal qui me permet d’allier chaque jour travail et passion, en prenant soin et en communiquant avec les animaux.
+    Pour cela, je vais, continuer à m’investir avec beaucoup d’amour, de sérieux et de professionnalisme dans le bien-être de vos compagnons animaliers !
+
+    **Avec Manon et ses visites à domicile, partez l’esprit tranquille :)**
+
+en:
+  title: About Manon
+  menu_title: About me
+  fragment: about-manon
+  body: |-
+    I decided to start this activity after several owners these last years asked me to take care of their horses and pets while they were away.
+    These people were looking for someone they could trust, who was available and knew how to take care of horses.
+    With more than 12 years of working with horses in France and abroad, including being a horse breeding manager, I became the person to contact in case of departure, even unexpected, to check that the animal “family” members staying at home were doing well.
+
+    In addition to my practical experience, I hold a diploma in animal production with an equine specialization and another one in marketing and valorization in the equine sector which are both offering me a theoretical knowledge foundation I'm using everyday.
+
+    Furthermore, holding a horse-riding instructor diploma since 2011 and riding in eventing shows in my free time, I regularly work with horses, both doing ground and ridden work. So, I offer to work your horses if you wish.
+
+    I found that horse owners often have other animals. That's why I decided to pass the Acaced (pet knowledge certificate) to better address these requests.
+
+    I, myself, am a horse and cat owner for several years, and I have sometimes had to go away, so I totally understand your essential need to find the right person which should be totally trustworthy and able to provide serenity for you and well-being for your animals.
+
+    Over time, I gained some work experience thanks to various assignments I got to do, both with professionals and individuals. These opportunities allowed me to meet a lot of animals and to create relationships with them, to get to know them better along with teir own personalities.
+    I was able to notice that all the horses, dogs and cats enjoyed the love, attention and care I provided to them, and [their owners were delighted](#testimonies).
+
+    Your trust during all these years is the main asset which allows me, each day, to combine my work with my passion, taking care and communicating with animals.
+    I will continue to commit myself with lots of love, thoroughness and professionalism to the well-being of your animal fellows !
+
+    **With Manon and her animal-sitting, leave with your mind at ease :)**

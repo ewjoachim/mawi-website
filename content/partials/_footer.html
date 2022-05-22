@@ -1,4 +1,4 @@
 <footer class="w-full p-5 bg-gray-200">
-  <div class="text-xs text-center markdown">{{ copyright }}</div>
-  <div class="text-xs text-center underline markdown"><a href="{{ '/cgv' if language == 'fr' else '/cgv-en' }}">{{ terms_title }}</a></div>
+  <div class="text-xs text-center md">{% markdown %}{{ metadata[lang].copyright }}{% endmarkdown %}</div>
+  <div class="text-xs text-center underline markdown"><a href="{{ '/cgv' if lang == 'fr' else '/cgv-en' }}">{{ cgv[lang].title }}</a></div>
 </footer>

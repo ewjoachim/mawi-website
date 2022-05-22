@@ -10,8 +10,6 @@
   .md p {@apply pb-4;}
   .md ul {@apply pl-4 pb-4;}
   .md li {@apply list-disc pl-2 -indent-2;}
-  .md blockquote {@apply mt-6 pl-5 ml-5 italic border-l-4 border-gray-300;}
-  .md cite {@apply italic text-gray-600;}
 }
 
 @layer utilities {

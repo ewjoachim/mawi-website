@@ -1,10 +1,7 @@
 variables:
-  email_domain: manon-bc.fr
   base_url:
     default: "https://manon-bc.fr/"
     from_env: URL
-  map_token:
-    default: "pk.eyJ1IjoiZXdqb2FjaGltIiwiYSI6ImNsMW8wbG8xdzAxMnAzZG5xbjZzZnNxMmUifQ.2om45d2fPNIwlDI3Hy7ZvQ"
 
 steps:
   - run: "mkdir -p output/js/ output/css/"

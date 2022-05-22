@@ -1,0 +1,14 @@
+{% extends "skeleton.template.html" %}
+
+{% block main %}
+{% include "partials/_cgv_nav.html" %}
+{% with header_subtitle=cgv[lang].title %}
+  {% include "partials/_header.html" %}
+{% endwith %}
+
+<section class="w-full p-6 mx-0 bg-gray-100 min-w-fit md:px-12 lg:px-24 md">
+{% markdown %}
+{{- cgv[lang].body -}}
+{% endmarkdown %}
+</section>
+{% endblock main %}
