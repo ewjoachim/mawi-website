@@ -1,0 +1,353 @@
+backend:
+  name: github
+  repo: mawi-website/mawi-website
+
+i18n:
+  structure: single_file
+  locales: [fr, en]
+  default_locale: fr
+
+publish_mode: editorial_workflow
+
+media_folder: "content/img"
+public_folder: "/img"
+
+site_url: https://www.manon-bc.fr
+
+collections:
+  - name: "section" # Used in routes, e.g., /admin/collections/blog
+    label: "Sections" # Used in the UI
+    i18n: true
+    files:
+      - label: "À propos de Manon"
+        i18n: true
+        name: "about_me"
+        file: "content/_about_me.yml"
+        fields:
+
+          - label: Titre
+            name: title
+            i18n: true
+            widget: string
+
+          - label: Titre dans la barre de navigation
+            name: menu_title
+            i18n: true
+            widget: string
+
+          - label: Fragment d'URL
+            hint: Le truc qui apparait dans l'url quand on suit un lien interne qui scrolle
+            name: fragment
+            i18n: true
+            widget: string
+
+          - label: Corps
+            name: body
+            i18n: true
+            widget: markdown
+
+          - label: Images sur le côté
+            name: images
+            i18n: false
+            widget: list
+            field: {label: Image, widget: image}
+
+          - label: Gallerie d'images en dessous
+            name: gallery
+            i18n: false
+            widget: list
+            fields:
+              - {name: src, label: Image, widget: image}
+              - {name: size, label: Image, widget: select, options: ["small", "big"]}
+
+      - label: "Contact"
+        i18n: true
+        name: "contact"
+        file: "content/_contact.yml"
+        fields:
+
+          - label: Titre
+            name: title
+            i18n: true
+            widget: string
+
+          - label: Titre dans la barre de navigation
+            name: menu_title
+            i18n: true
+            widget: string
+
+          - label: Fragment d'URL
+            hint: Le truc qui apparait dans l'url quand on suit un lien interne qui scrolle
+            name: fragment
+            i18n: true
+            widget: string
+
+          - label: Corps
+            name: body
+            i18n: true
+            widget: markdown
+
+          - label: Email de contact
+            name: email
+            i18n: false
+            widget: string
+
+          - label: Images sur le côté
+            name: images
+            i18n: false
+            widget: list
+            field: {label: Image, widget: image}
+
+      - label: "Photos"
+        i18n: true
+        name: "gallery"
+        file: "content/_gallery.yml"
+        fields:
+
+          - label: Titre
+            name: title
+            i18n: true
+            widget: string
+
+          - label: Titre dans la barre de navigation
+            name: menu_title
+            i18n: true
+            widget: string
+
+          - label: Fragment d'URL
+            hint: Le truc qui apparait dans l'url quand on suit un lien interne qui scrolle
+            name: fragment
+            i18n: true
+            widget: string
+
+          - label: Gallerie d'images en dessous
+            name: gallery
+            i18n: false
+            widget: list
+            fields:
+              - {name: src, label: Image, widget: image}
+              - {name: size, label: Image, widget: select, options: ["small", "big"]}
+
+      - label: "Zone d'intervention"
+        i18n: true
+        name: "map"
+        file: "content/_map.yml"
+        fields:
+
+          - label: Titre
+            name: title
+            i18n: true
+            widget: string
+
+          - label: Fragment d'URL
+            hint: Le truc qui apparait dans l'url quand on suit un lien interne qui scrolle
+            name: fragment
+            i18n: true
+            widget: string
+
+          - label: Corps
+            name: body
+            i18n: true
+            widget: markdown
+
+          - label: Centre du cercle
+            name: geojson
+            widget: map
+            i18n: false
+
+          - label: Rayon du cercle (en metres)
+            name: radius
+            widget: string
+            pattern: ['[0-9]+', "Il faut mettre un nombre"]
+            i18n: false
+
+          - label: Zoom de la carte
+            hint: Chaque incrément ajoute un click sur "+", 0 étant la Terre entière
+            name: init_zoom
+            widget: string
+            pattern: ['[0-9]+', "Il faut mettre un nombre"]
+            i18n: false
+
+          - name: token
+            widget: hidden
+            i18n: false
+
+      - label: "Prestations & Tarifs"
+        i18n: true
+        name: "services_prices"
+        file: "content/_services_prices.yml"
+        fields:
+
+          - label: Titre
+            name: title
+            i18n: true
+            widget: string
+
+          - label: Titre dans la barre de navigation
+            name: menu_title
+            i18n: true
+            widget: string
+
+          - label: Fragment d'URL
+            hint: Le truc qui apparait dans l'url quand on suit un lien interne qui scrolle
+            name: fragment
+            i18n: true
+            widget: string
+
+          - label: Corps
+            name: body
+            i18n: true
+            widget: markdown
+
+          - label: Images sur le côté
+            name: images
+            i18n: false
+            widget: list
+            field: {label: Image, widget: image}
+
+      - label: "Section Témoignages"
+        i18n: true
+        name: "services_prices"
+        file: "content/_services_prices.yml"
+        fields:
+
+          - label: Titre
+            name: title
+            i18n: true
+            widget: string
+
+          - label: Fragment d'URL
+            hint: Le truc qui apparait dans l'url quand on suit un lien interne qui scrolle
+            name: fragment
+            i18n: true
+            widget: string
+
+  - name: "testimonies"
+    label: "Sections"
+    folder: "content/testimonies"
+    slug: "{{order}}-{{author}}"
+    i18n: true
+    fields:
+
+      - label: Ordre
+        name: order
+        i18n: false
+        widget: string
+        pattern: ['[0-9]{2}', "Il faut mettre un nombre à 2 chiffres"]
+
+      - label: Citation
+        name: body
+        i18n: true
+        widget: markdown
+
+      - label: Qui a dit ça ?
+        name: author
+        i18n: false
+        widget: string
+
+      - label: Qui est cette personne ?
+        name: author_desc
+        i18n: false
+        widget: markdown
+        minimal: true
+
+      - label: Image sur le côté
+        name: image
+        i18n: false
+        widget: image
+
+
+  - name: "cgv"
+    label: "Conditions Générales de Vente"
+    i18n: true
+    files:
+      - label: "Conditions Générales de Vente"
+        i18n: true
+        name: "cgv"
+        file: "content/_cgv.yml"
+        fields:
+
+          - label: Titre
+            name: title
+            i18n: true
+            widget: string
+
+          - label: Titre du bouton pour revenir au site
+            name: back_to_site_title
+            i18n: true
+            widget: string
+
+          - label: Conditions Générales de Vente
+            name: body
+            i18n: true
+            widget: markdown
+
+
+  - name: "metadata"
+    label: "Paramètres du site"
+    i18n: true
+    files:
+      - label: "Contenu"
+        i18n: true
+        name: "metadata"
+        file: "content/_metadata.yml"
+        fields:
+
+          - label: Titre du site (dans la bannière)
+            name: title
+            i18n: true
+            widget: string
+
+          - label: Sous-titre du site (dans la bannière)
+            name: subtitle
+            i18n: true
+            widget: markdown
+
+          - label: Image de bannière
+            hint: "Attention: pas d'espace ou de caractère spécial dans le nom du fichier."
+            name: hero_image
+            i18n: false
+            widget: image
+
+          - label: Page Facebook
+            name: facebook_url
+            i18n: false
+            widget: string
+
+          - label: Texte alternatif aux photos pour l'accessibilité
+            hint: Pour l'instant, toutes les photos ont le même texte alternatif
+            name: image_alt
+            i18n: true
+            widget: string
+
+          - label: Copyright et contenu du pied de page
+            name: copyright
+            i18n: true
+            widget: markdown
+
+      - label: "Métadonnées"
+        i18n: true
+        name: "metadata"
+        file: "content/_metadata.yml"
+        fields:
+
+          - label: Titre du site (apparait dans l'onglet)
+            name: title
+            i18n: true
+            widget: string
+
+          - label: Mots-clés
+            hint: séparés par des virgules
+            name: keywords
+            i18n: true
+            widget: string
+
+          - label: Description du site
+            name: description
+            i18n: true
+            widget: string
+
+          - label: Image de partage pour les réseaux sociaux
+            name: social_file
+            i18n: true
+            widget: image
