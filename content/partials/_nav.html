@@ -21,7 +21,7 @@
         {"label": about_me[lang].menu_title, "url": "#" + about_me[lang].fragment},
         {"label": gallery[lang].title, "url": "#" + gallery[lang].fragment},
       ] %}
-      <a class="flex-1 px-1 py-5 font-bold tracking-widest text-center uppercase sm:text-sm md:text-base lg:px-5 lg:text-lg hover:bg-gray-500/20" target="_blank" target="{% if link.ext|default(False) %}_blank{% else %}_self{% endif %}" href="{{ link.url }}">{{ link.label }}</a>
+      <a class="flex-1 px-1 py-5 font-bold tracking-widest text-center uppercase sm:text-sm md:text-base lg:px-5 lg:text-lg hover:bg-gray-500/20" target="{% if link.ext|default(False) %}_blank{% else %}_self{% endif %}" href="{{ link.url }}">{{ link.label }}</a>
       {% endfor %}
       <a class="flex-1 px-1 py-5 font-bold tracking-widest text-center uppercase sm:text-sm md:text-base lg:px-5 lg:text-lg hover:bg-gray-500/20" href="{{ '/en' if lang == 'fr' else '/' }}"><span class="{{ 'underline' if lang == 'fr' else '' }}">&#127467;&#127479;</span>&nbsp;/&nbsp;<span class="{{ 'underline' if lang == 'en' else '' }}">&#127468;&#127463;</a>
     </div>
