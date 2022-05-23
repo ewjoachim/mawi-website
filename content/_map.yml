@@ -7,7 +7,7 @@ fr:
     cas de doute, [contactez-moi](#manon-bourgeois-cuny)!"
   geojson: '{"type":"Point","coordinates":[0.7823471,46.0088008]}'
   radius: "25000"
-  init_zoom: "0"
+  init_zoom: "9"
 en:
   title: Servicing area
   fragment: area
