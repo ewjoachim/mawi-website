@@ -229,6 +229,7 @@ collections:
     folder: "content/testimonies"
     slug: "{{order}}-{{author}}"
     extension: yml
+    identifier_field: author
     create: true
     fields:
 
