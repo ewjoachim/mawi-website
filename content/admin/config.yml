@@ -47,19 +47,48 @@ collections:
             i18n: true
             widget: markdown
 
-          - label: Images sur le côté
+          - label: Photos sur le côté
             name: images
             i18n: false
             widget: list
-            field: {name: src, label: Image, widget: image}
+            field: {name: src, label: Photo, widget: image}
 
-          - label: Gallerie d'images en dessous
+          - label: Photos en dessous
             name: gallery
             i18n: false
-            widget: list
+            widget: object
             fields:
-              - {name: src, label: Image, widget: image}
-              - {name: size, label: Image, widget: select, options: ["small", "big"]}
+              - label: Photos dans la colonne 1
+                name: col1
+                widget: list
+                fields:
+                  - name: src
+                    label: Photo
+                    widget: image
+                  - name: size
+                    label: Taille
+                    widget: select
+                    options:
+                      - label: Petite
+                        value: small
+                      - label: Grande
+                        value: big
+              - label: Photos dans la colonne 2
+                name: col2
+                widget: list
+                fields:
+                  - name: src
+                    label: Photo
+                    widget: image
+                  - name: size
+                    label: Taille
+                    widget: select
+                    options:
+                      - label: Petite
+                        value: small
+                      - label: Grande
+                        value: big
+
 
       - label: "Contact"
         name: "contact"
@@ -97,7 +126,7 @@ collections:
             name: images
             i18n: false
             widget: list
-            field: {name: src, label: Image, widget: image}
+            field: {name: src, label: Photo, widget: image}
 
       - label: "Photos"
         name: "gallery"
@@ -121,13 +150,42 @@ collections:
             i18n: true
             widget: string
 
-          - label: Gallerie d'images en dessous
+          - label: Photos
             name: gallery
             i18n: false
-            widget: list
+            widget: object
             fields:
-              - {name: src, label: Image, widget: image}
-              - {name: size, label: Image, widget: select, options: ["small", "big"]}
+              - label: Photos dans la colonne 1
+                name: col1
+                widget: list
+                fields:
+                  - name: src
+                    label: Photo
+                    widget: image
+                  - name: size
+                    label: Taille
+                    widget: select
+                    options:
+                      - label: Petite
+                        value: small
+                      - label: Grande
+                        value: big
+              - label: Photos dans la colonne 2
+                name: col2
+                widget: list
+                fields:
+                  - name: src
+                    label: Photo
+                    widget: image
+                  - name: size
+                    label: Taille
+                    widget: select
+                    options:
+                      - label: Petite
+                        value: small
+                      - label: Grande
+                        value: big
+
 
       - label: "Zone d'intervention"
         name: "map"
@@ -204,7 +262,7 @@ collections:
             name: images
             i18n: false
             widget: list
-            field: {name: src, label: Image, widget: image}
+            field: {name: src, label: Photo, widget: image}
 
       - label: "Section Témoignages"
         name: "testimony_section"
