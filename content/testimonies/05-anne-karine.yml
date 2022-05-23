@@ -1,6 +1,6 @@
-image: "/img/horse7.jpg"
-order: "05"
 fr:
+  image: "/img/horse7.jpg"
+  order: "05"
   author: Anne-Karine
   author_desc: "Gérante de la structure professionnelle : La Petite Maison de Gauchoux sur Peyrat-de-Bellac (87300)"
   body: |-

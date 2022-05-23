@@ -1,6 +1,6 @@
-image: "/img/horse8.jpg"
-order: "06"
 fr:
+  image: "/img/horse8.jpg"
+  order: "06"
   author: Sarah
   author_desc: Propriétaire de Chevaux sur Poitiers (86000)
   body: |-

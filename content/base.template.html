@@ -51,7 +51,7 @@
       </div>
 
       {% call image_col() %}
-        {% for src in sec.images %}
+        {% for src in sec.fr.images %}
           {{ image(src) }}
         {% endfor %}
       {% endcall %}
@@ -91,7 +91,7 @@
 </section>
 
 {% call section(about_me) %}
-{{ image_gallery(about_me.gallery) }}
+{{ image_gallery(about_me.fr.gallery) }}
 {% endcall %}
 
 {{- flex_direction.reset() or '' -}}
@@ -114,7 +114,7 @@
         </div>
       </div>
       {% call image_col() %}
-      {{ image(tes.image) }}
+      {{ image(tes.fr.image) }}
       {% endcall %}
     </div>
   {% endfor %}
@@ -122,7 +122,7 @@
 </section>
 
 <section class="w-full py-6 mx-0 lg:p-12 sm:p-6 min-w-fit {{ bg_colors.next() }}" id="{{ gallery[lang].fragment }}">
-  {{ image_gallery(gallery.gallery) }}
+  {{ image_gallery(gallery.fr.gallery) }}
 </section>
 
 

@@ -1,6 +1,6 @@
-image: "/img/horse6.jpg"
-order: "04"
 fr:
+  image: "/img/horse6.jpg"
+  order: "04"
   author: Isabel
   author_desc: Propriétaire de chevaux sur Montrollet (16420)
   body: |-

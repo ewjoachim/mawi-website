@@ -17,12 +17,12 @@ site_url: https://www.manon-bc.fr
 
 collections:
   - name: "section" # Used in routes, e.g., /admin/collections/blog
-    label: "Sections" # Used in the UI
     i18n: true
+    label: "Sections" # Used in the UI
     files:
       - label: "À propos de Manon"
-        i18n: true
         name: "about_me"
+        i18n: true
         file: "content/_about_me.yml"
         fields:
 
@@ -62,8 +62,8 @@ collections:
               - {name: size, label: Image, widget: select, options: ["small", "big"]}
 
       - label: "Contact"
-        i18n: true
         name: "contact"
+        i18n: true
         file: "content/_contact.yml"
         fields:
 
@@ -100,8 +100,8 @@ collections:
             field: {name: src, label: Image, widget: image}
 
       - label: "Photos"
-        i18n: true
         name: "gallery"
+        i18n: true
         file: "content/_gallery.yml"
         fields:
 
@@ -130,8 +130,8 @@ collections:
               - {name: size, label: Image, widget: select, options: ["small", "big"]}
 
       - label: "Zone d'intervention"
-        i18n: true
         name: "map"
+        i18n: true
         file: "content/_map.yml"
         fields:
 
@@ -153,29 +153,29 @@ collections:
 
           - label: Centre du cercle
             name: geojson
-            widget: map
             i18n: false
+            widget: map
 
           - label: Rayon du cercle (en metres)
             name: radius
+            i18n: false
             widget: string
             pattern: ['[0-9]+', "Il faut mettre un nombre"]
-            i18n: false
 
           - label: Zoom de la carte
             hint: Chaque incrément ajoute un click sur "+", 0 étant la Terre entière
             name: init_zoom
+            i18n: false
             widget: string
             pattern: ['[0-9]+', "Il faut mettre un nombre"]
-            i18n: false
 
           - name: token
-            widget: hidden
             i18n: false
+            widget: hidden
 
       - label: "Prestations & Tarifs"
-        i18n: true
         name: "services_prices"
+        i18n: true
         file: "content/_services_prices.yml"
         fields:
 
@@ -207,8 +207,8 @@ collections:
             field: {name: src, label: Image, widget: image}
 
       - label: "Section Témoignages"
-        i18n: true
         name: "testimony_section"
+        i18n: true
         file: "content/_testimony_section.yml"
         fields:
 
@@ -224,10 +224,10 @@ collections:
             widget: string
 
   - name: "testimonies"
+    i18n: true
     label: "Témoignages"
     folder: "content/testimonies"
     slug: "{{order}}-{{author}}"
-    i18n: true
     create: true
     fields:
 
@@ -260,12 +260,12 @@ collections:
 
 
   - name: "cgv"
-    label: "Conditions Générales de Vente"
     i18n: true
+    label: "Conditions Générales de Vente"
     files:
       - label: "Conditions Générales de Vente"
-        i18n: true
         name: "cgv"
+        i18n: true
         file: "content/_cgv.yml"
         fields:
 
@@ -286,12 +286,12 @@ collections:
 
 
   - name: "metadata"
-    label: "Paramètres du site"
     i18n: true
+    label: "Paramètres du site"
     files:
       - label: "Contenu"
-        i18n: true
         name: "metadata"
+        i18n: true
         file: "content/_metadata.yml"
         fields:
 
@@ -328,8 +328,8 @@ collections:
             widget: markdown
 
       - label: "Métadonnées"
-        i18n: true
         name: "seo_metadata"
+        i18n: true
         file: "content/_seo_metadata.yml"
         fields:
 

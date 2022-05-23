@@ -1,6 +1,6 @@
-image: "/img/dog2.jpg"
-order: "07"
 fr:
+  image: "/img/dog2.jpg"
+  order: "07"
   author: Cécile
   author_desc: Propriétaire de chiens sur Peyrat-de-Bellac (87300)
   body: |-

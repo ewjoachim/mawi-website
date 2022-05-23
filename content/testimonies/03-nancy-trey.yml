@@ -1,6 +1,6 @@
-image: "/img/horse5.jpg"
-order: "03"
 fr:
+  image: "/img/horse5.jpg"
+  order: "03"
   author: Nancy et Trey
   author_desc: Gérants d’E Komo Mai Sport Horses, Centre Equestre et Elevage à Hawai’i (USA)
   body: |-

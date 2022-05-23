@@ -1,6 +1,6 @@
-image: "/img/horse3.jpg"
-order: "01"
 fr:
+  image: "/img/horse3.jpg"
+  order: "01"
   author: Aude-Lyne et Alan
   author_desc: Gérants du Domaine de Gauchoux, Centre Equestre et Elevage sur Peyrat-de-Bellac (87300)
   body: |-

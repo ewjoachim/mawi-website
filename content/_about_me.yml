@@ -1,19 +1,19 @@
-images:
-  - /img/cat2.jpg
-gallery:
-  col1:
-    - src: /img/manon2.jpg
-      size: small
-    - src: /img/manon5.jpg
-      size: small
-    - src: /img/manon3.jpg
-      size: big
-  col2:
-    - src: /img/manon4.jpg
-      size: big
-    - src: /img/manon1.jpg
-      size: big
 fr:
+  images:
+    - /img/cat2.jpg
+  gallery:
+    col1:
+      - src: /img/manon2.jpg
+        size: small
+      - src: /img/manon5.jpg
+        size: small
+      - src: /img/manon3.jpg
+        size: big
+    col2:
+      - src: /img/manon4.jpg
+        size: big
+      - src: /img/manon1.jpg
+        size: big
   title: À propos de Manon…
   menu_title: À propos
   fragment: a-propos-de-manon

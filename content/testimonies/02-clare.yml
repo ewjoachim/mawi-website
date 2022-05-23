@@ -1,6 +1,6 @@
-image: "/img/horse4.jpg"
-order: "02"
 fr:
+  image: "/img/horse4.jpg"
+  order: "02"
   author: Clare
   author_desc: Propriétaire de chevaux (chats, poissons et plantes) sur Nouic (87330)
   body: |-

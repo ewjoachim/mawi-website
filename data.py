@@ -2,7 +2,6 @@
 import pathlib
 
 import yaml
-import json
 
 exclude = {pathlib.Path("content/admin/config.yml")}
 

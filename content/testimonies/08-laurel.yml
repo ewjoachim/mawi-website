@@ -1,6 +1,6 @@
-image: "/img/dog3.jpg"
-order: "08"
 fr:
+  image: "/img/dog3.jpg"
+  order: "08"
   author: Laurel
   author_desc: Propriétaire de Chevaux et Chiens sur Nouic (87330)
   body: |-

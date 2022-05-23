@@ -1,7 +1,7 @@
-images:
-  - /img/horse1.jpg
-email: contact@manon-bc.fr
 fr:
+  images:
+    - /img/horse1.jpg
+  email: contact@manon-bc.fr
   title: Manon Bourgeois-Cuny
   menu_title: Contact
   fragment: manon-bourgeois-cuny

@@ -15,7 +15,7 @@
     <div class="flex flex-col sm:flex-row">
       <a class="flex-1 hidden px-1 py-5 font-bold tracking-widest text-center uppercase sm:text-sm md:text-base lg:px-5 lg:text-lg sm:block hover:bg-gray-500/20" href="#" >{{ metadata[lang].title }}</a>
       {% for link in [
-        {"label": "Facebook", "url": metadata.facebook_url, "ext": True},
+        {"label": "Facebook", "url": metadata.fr.facebook_url, "ext": True},
         {"label": contact[lang].menu_title, "url": "#" + contact[lang].fragment},
         {"label": services_prices[lang].menu_title, "url": "#" + services_prices[lang].fragment},
         {"label": about_me[lang].menu_title, "url": "#" + about_me[lang].fragment},

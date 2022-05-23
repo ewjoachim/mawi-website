@@ -1,6 +1,6 @@
-image: "/img/horse9.jpg"
-order: "09"
 fr:
+  image: "/img/horse9.jpg"
+  order: "09"
   author: Mélanie
   author_desc: Propriétaire de chevaux sur Peyrat-de-Bellac (87300)
   body: |-
