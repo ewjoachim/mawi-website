@@ -2,12 +2,12 @@ function drawMap() {
   var element = document.getElementById("map-data")
   if (!element) { return; }
   var mapData = JSON.parse(element.innerText);
-
+  var geojson = JSON.parse(mapData.geojson);
   // https://macwright.com/lonlat/
   var map = L.map(
     'map',
     { scrollWheelZoom: false }
-  ).setView(mapData.geojson[0].geometry.coordinates.slice().reverse(), mapData.initZoom);
+  ).setView(geojson.coordinates.slice().reverse(), mapData.initZoom);
 
   map.on('focus', function () { map.scrollWheelZoom.enable(); });
   map.on('blur', function () { map.scrollWheelZoom.disable(); });
@@ -21,9 +21,9 @@ function drawMap() {
     accessToken: mapData.token
   }).addTo(map);
 
-  L.geoJSON(mapData.geojson, {
+  L.geoJSON(geojson, {
     pointToLayer: function (feature, latlng) {
-      return L.circle(latlng, { radius: feature.properties.radius });
+      return L.circle(latlng, { radius: mapData.radius });
     }
   }).addTo(map);
 }
@@ -79,9 +79,7 @@ function setupAntiSpam() {
   })
 }
 
-document.addEventListener("DOMContentLoaded", function () {
-  drawMap();
-  setupMobileMenu();
-  setupScroll();
-  setupAntiSpam();
-});
+document.addEventListener("DOMContentLoaded", setupAntiSpam);
+document.addEventListener("DOMContentLoaded", setupMobileMenu);
+document.addEventListener("DOMContentLoaded", setupScroll);
+document.addEventListener("DOMContentLoaded", drawMap);

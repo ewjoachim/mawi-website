@@ -82,9 +82,10 @@
   </div>
 
   {% set map_data = {
-  "token": map.token,
-  "geojson": map.geojson,
-  "initZoom": map.init_zoom,
+  "token": map.fr.token,
+  "geojson": map.fr.geojson,
+  "radius": map.fr.radius,
+  "initZoom": map.fr.init_zoom,
   } %}
   <script id="map-data" type="application/json">{{ map_data | tojson }}</script>
 

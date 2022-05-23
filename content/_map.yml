@@ -1,17 +1,9 @@
-geojson: [{
-        "type": "Feature",
-        "properties": {
-            "shape": "Circle",
-            "radius": 25000,
-        },
-        "geometry": {
-            "type": "Point",
-            "coordinates": [0.780716, 46.010078]
-        }
-    }]
-token: "pk.eyJ1IjoiZXdqb2FjaGltIiwiYSI6ImNsMW8wbG8xdzAxMnAzZG5xbjZzZnNxMmUifQ.2om45d2fPNIwlDI3Hy7ZvQ"
-init_zoom: 9
 fr:
+  geojson: |-
+    {"type": "Point", "coordinates": [0.780716, 46.010078]}
+  token: "pk.eyJ1IjoiZXdqb2FjaGltIiwiYSI6ImNsMW8wbG8xdzAxMnAzZG5xbjZzZnNxMmUifQ.2om45d2fPNIwlDI3Hy7ZvQ"
+  init_zoom: 9
+  radius: 25000
   title: Zone d'intervention
   fragment: zone
   body: |-
