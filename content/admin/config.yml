@@ -228,6 +228,7 @@ collections:
     label: "Témoignages"
     folder: "content/testimonies"
     slug: "{{order}}-{{author}}"
+    extension: yml
     create: true
     fields:
 
